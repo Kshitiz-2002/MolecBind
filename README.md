@@ -12,7 +12,6 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🧬 [Protein Data Processing](#protein-data)
-6. 🚀 [More](#more)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -98,7 +97,3 @@ Users can upload PDB files for protein structures, which will then be processed 
 ### **Docking Simulation**
 
 Using molecular docking algorithms, the system predicts how small molecules (such as drug candidates) bind to protein targets.
-
-## <a name="more">🚀 More</a>
-
-Stay tuned for more updates and features! Join our community, contribute to the repository, and follow along with our detailed tutorials.
