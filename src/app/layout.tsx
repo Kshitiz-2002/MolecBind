@@ -13,11 +13,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SessionProvider>
-        <UserProvider>
-          <body suppressHydrationWarning={true}>{children}</body>
-        </UserProvider>
-      </SessionProvider>
+      <script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
+      <body suppressHydrationWarning={true}>
+        <SessionProvider>
+          <UserProvider>
+                <div className="font-poppins dark:bg-boxdark-2 dark:text-bodydark ">
+                  {children}
+                </div>
+          </UserProvider>
+        </SessionProvider>
+      </body>
     </html>
   );
 }
