@@ -6,7 +6,7 @@ import {
     ReactNode,
   } from "react";
   import { useSession } from "next-auth/react";
-  import { getUserByEmail } from "@/lib/actions/user.action";
+  import { getUserByEmail } from "@/lib/actions/user.actions";
   
   const UserContext = createContext<any>(null);
   export const UserProvider = ({ children }: { children: ReactNode }) => {

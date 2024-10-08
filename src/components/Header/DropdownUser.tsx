@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ChevronDown, LogOut, Settings, User2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ClickOutside from "@/components/ClickOutside";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -18,8 +19,7 @@ const DropdownUser = () => {
   };
 
   return (
-    <div>
-
+    <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <Link
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="flex items-center gap-4"
@@ -80,8 +80,7 @@ const DropdownUser = () => {
           </button>
         </div>
       )}
-
-    </div>
+    </ClickOutside>
   );
 };
 

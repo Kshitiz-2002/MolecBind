@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ComponentHeader from "@/components/ComponentHeader/ComponentHeader";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
-import { createUser } from "@/lib/actions/user.action";
+import { createUser } from "@/lib/actions/user.actions";
 import {
   CameraIcon,
   LoaderCircle,

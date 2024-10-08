@@ -5,7 +5,7 @@ import { LoaderCircle, LockIcon } from "lucide-react";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
 import { useRouter, useSearchParams } from "next/navigation";
-import { resetPassword } from "@/lib/actions/user.action";
+import { resetPassword } from "@/lib/actions/user.actions";
 
 const ResetPasswordPage: React.FC = () => {
   const [password, setPassword] = useState("");

@@ -1,6 +1,6 @@
+import Index from "@/components/Dashboard";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
-import Index from "@/components/Dashboard";
 
 export const metadata: Metadata = {
   title:
@@ -8,11 +8,12 @@ export const metadata: Metadata = {
   description: "This is description for molecule bind",
 };
 
+
 export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <Index/>
+        <Index />
       </DefaultLayout>
     </>
   );
