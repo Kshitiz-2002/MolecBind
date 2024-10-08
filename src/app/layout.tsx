@@ -4,6 +4,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import { SessionProvider } from "next-auth/react";
+import { UserProvider } from "@/app/context/UserContext";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SessionProvider>
-        <body suppressHydrationWarning={true}>{children}</body>
+        <UserProvider>
+          <body suppressHydrationWarning={true}>{children}</body>
+        </UserProvider>
       </SessionProvider>
     </html>
   );

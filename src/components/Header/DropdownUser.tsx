@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-// import { useUser } from "@/app/context/UserContext";
+import { useUser } from "@/app/context/UserContext";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, LogOut, Settings, User2 } from "lucide-react";
@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  // const user = useUser();
+  const user = useUser();
   const router = useRouter();
 
   const handleLogout = async () => {
@@ -27,19 +27,16 @@ const DropdownUser = () => {
       >
         <span className="hidden text-right lg:block">
           <span className="block text-sm font-medium text-black dark:text-white">
-            {/* {user.firstName} {user.lastName} */}
-            {'John Doe'}
+            {user.firstName} {user.lastName}
           </span>
-          {/* <span className="block text-xs">{user.jobTitle}</span> */}
-          <span className="block text-xs">{'Drug Researcher'}</span>
+          <span className="block text-xs">{user.jobTitle}</span>
         </span>
 
         <span className="h-11 w-11 rounded-full">
           <Image
             width={80}
             height={80}
-            // src={user.photo}
-            src='/images/user/user-01.png'
+            src={user.photo}
             className="rounded-full"
             style={{
               width: "auto",
